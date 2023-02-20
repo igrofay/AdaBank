@@ -6,9 +6,15 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import com.example.adabank.feature.start.splash.view.SplashScreen
 import com.example.adabank.feature.common.theme.ApplicationTheme
+import com.example.adabank.feature.common.view.pin.InputPinScreen
+import com.example.adabank.feature.menu.home.view.HomeScreen
+import com.example.adabank.feature.start.login.view.LoginScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -22,10 +28,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    SplashScreen(
-                        needInputPin = {},
-                        needSignIn = {}
-                    )
+                    HomeScreen()
                 }
             }
         }
